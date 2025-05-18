@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Web Design Mastery | Fitclub</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <!-- Navigation -->
+<nav class="navbar">
+  <div class="nav__logo" id="logo">
+    <a href="#"><img src="logo.png" alt="logo" /></a>
+  </div>
+
+  <!-- Mobile Menu Toggle Button -->
+  <div class="nav__toggle" onclick="toggleMenu()">
+    <i class="ri-menu-line"></i>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav__links" id="navLinks">
+    <li class="link"><a href="#logo">Home</a></li>
+    <li class="link"><a href="#explore">Program</a></li>
+    <li class="link"><a href="#why-join">Service</a></li>
+    <li class="link"><a href="#about">About</a></li>
+    <li class="link"><a href="#map-container">Find my gym</a></li>
+    <li class="link" id="dashboardLink" style="display: none;">
+      <a href="dashboard.html">Dashboard</a>
+    </li>
+  </ul>
+
+  <button class="btn open-modal">Join Now</button>
+</nav>
+
+  <!-- HOME -->
+  <header id="header" class="section__container header__container">
+    <div class="header__content">
+      <span class="bg__blur"></span>
+      <span class="bg__blur header__blur"></span>
+      <h4>BEST FITNESS IN THE TOWN</h4>
+      <h1><span>FORGE</span> YOUR PHYSIQUE</h1>
+      <p>
+        Unlock your strength and begin the path to a healthier, more empowered version of yourself.
+      </p>
+      <button class="btn open-modal">Get Started</button>
+    </div>
+    <div class="header__image">
+      <img src="header.png" alt="header" />
+    </div>
+  </header>
+
+  <!-- PROGRAM -->
+  <section id="explore" class="section__container explore__container">
+    <div class="explore__header">
+      <h2 class="section__header">EXPLORE OUR PROGRAM</h2>
+      <div class="explore__nav">
+        <span><i class="ri-arrow-left-line"></i></span>
+        <span><i class="ri-arrow-right-line"></i></span>
+      </div>
+    </div>
+    <div class="explore__grid">
+      <div class="explore__card"><span><i class="ri-boxing-fill"></i></span><h4>Strength</h4><p>Embrace strength in all dimensions.</p><a href="#">Join Now</a></div>
+      <div class="explore__card"><span><i class="ri-heart-pulse-fill"></i></span><h4>Physical Fitness</h4><p>Boost your health and flexibility.</p><a href="#">Join Now</a></div>
+      <div class="explore__card"><span><i class="ri-run-line"></i></span><h4>Fat Lose</h4><p>Guided plans to reduce fat.</p><a href="#">Join Now</a></div>
+      <div class="explore__card"><span><i class="ri-shopping-basket-fill"></i></span><h4>Weight Gain</h4><p>Gain weight the right way.</p><a href="#">Join Now</a></div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="why-join" class="section__container join__container">
+    <h2 class="section__header">WHY JOIN US ?</h2>
+    <p class="section__subheader">Friendly and supportive community.</p>
+    <div class="join__image">
+      <img src="join.jpg" alt="Join" />
+      <div class="join__grid">
+        <div class="join__card"><span><i class="ri-user-star-fill"></i></span><div><h4>Personal Trainer</h4><p>Expert guidance for you.</p></div></div>
+        <div class="join__card"><span><i class="ri-vidicon-fill"></i></span><div><h4>Practice Sessions</h4><p>High energy training.</p></div></div>
+        <div class="join__card"><span><i class="ri-building-line"></i></span><div><h4>Good Management</h4><p>Support that motivates.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section__container price__container">
+    <h2 class="section__header">OUR PRICING PLAN</h2>
+    <p class="section__subheader">Plans for every goal.</p>
+    <div class="price__grid">
+      <div class="price__card"><div><h4>Basic Plan</h4><h3>₱959</h3><p>Smart workout plan</p><p>Home workouts</p></div><button class="btn open-modal">Join Now</button></div>
+      <div class="price__card"><div><h4>Weekly Plan</h4><h3>₱1,499</h3><p>PRO Gyms</p><p>Smart plans</p></div><button class="btn open-modal">Join Now</button></div>
+      <div class="price__card"><div><h4>Monthly Plan</h4><h3>₱2,699</h3><p>All access</p><p>Personal Training</p></div><button class="btn open-modal">Join Now</button></div>
+    </div>
+  </section>
+
+ <!-- FEEDBACK SECTION -->
+<!-- Updated Feedback Section HTML --><section id="feedback" class="section__container feedback__container">
+  <h2 class="section__header">Send Us Your Feedback</h2>
+  <form id="feedbackForm" class="feedback__form">
+    <div class="input-box">
+      <input type="text" id="name" placeholder="Your Name" required />
+    </div>
+    <div class="input-box">
+      <input type="email" id="email" placeholder="Your Email" required />
+    </div>
+    <div class="input-box">
+      <textarea id="comment" rows="5" placeholder="Your Feedback or Comment..." required></textarea>
+    </div>
+    <div class="star-rating">
+  <span data-rating="1">&#9733;</span>
+  <span data-rating="2">&#9733;</span>
+  <span data-rating="3">&#9733;</span>
+  <span data-rating="4">&#9733;</span>
+  <span data-rating="5">&#9733;</span>
+</div>
+<input type="hidden" id="rating" value="0" />
+    <div class="button">
+      <input type="submit" value="Submit Feedback" />
+    </div>
+  </form>
+  <div id="feedbackMessage" class="toast">Thank you for your feedback!</div>  <div class="comment__list" id="commentList"></div>
+</section>
+
+<div id="feedbackMessage" class="toast">Thank you for your feedback!</div>
+<div id="commentsSection"></div>
+  
+  <!-- ABOUT US -->
+<section id="about" class="section__container about__container">
+  <h2 class="section__header">ABOUT US</h2>
+  <p class="section__subheader">We’re more than a gym — we’re a community.</p>
+  <div class="about__content">
+    <h3>Our Mission</h3>
+    <p>To empower individuals to lead healthier lives through innovative fitness programs and supportive coaching.</p>
+    <h3>Our Vision</h3>
+    <p>To become the leading fitness brand recognized for transforming lives with dedication, passion, and results.</p>
+    <h3>Our Team</h3>
+    <p>Meet our team of certified fitness coaches, nutritionists, and wellness experts, all here to support your goals.</p>
+  </div>
+</section>
+
+<!-- CONTACT US -->
+<section id="contact" class="section__container contact__container">
+  <h2 class="section__header">CONTACT US</h2>
+  <p class="section__subheader">We're always here to help you stay on track.</p>
+  <div class="contact__details">
+    <p><strong>Email:</strong> icojornadal@gmail.com</p>
+    <p><strong>Phone:</strong> +63 9317813025</p>
+    <p><strong>Address: </strong>348 Umali St. Teves Apartment Unit E Brgy. Poblacion Muntinlupa City</p>
+    <div class="map-container" id="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.0549463663886!2d121.03997927592388!3d14.650299176372336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1f8cd7c1dbf%3A0x7f6d40889e47cf4c!2s348%20Umali%20St%2C%20Muntinlupa%2C%201776%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sph!4v1715957121539!5m2!1sen!2sph"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+  <div id="feedbackMessage" class="toast">Thanks for your feedback!</div>
+</section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="section__container footer__container">
+    <div class="footer__col">
+      <div class="footer__logo"><img src="logo.png" alt="logo" /></div>
+      <p>Get fit with our unbeatable pricing plans.</p>
+      <div class="footer__socials">
+        <a href="https://www.facebook.com/robertjohn.villagen" target="_blank"><i class="ri-facebook-fill"></i></a>
+        <a href="https://www.instagram.com/rjmabeza?igsh=dGpwdHR6dWc1NDgz&utm_source=qr" target="_blank"><i class="ri-instagram-line"></i></a>
+      </div>
+    </div>
+    <div class="footer__col"><h4>Company</h4><a href="#">Business</a><a href="#">Franchise</a><a href="#">Partnership</a><a href="#">Network</a></div>
+    <div class="footer__col"><h4>About Us</h4><a href="#">Blogs</a><a href="#">Security</a><a href="#">Careers</a></div>
+    <div class="footer__col"><h4>Contact</h4><a href="#">Contact Us</a><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">BMI Calculator</a></div>
+  </footer>
+  <div class="footer__bar">Copyright © 2025 Webgymrats. All rights reserved.</div>
+
+  <!-- MODAL -->
+  <!-- MODAL: Login & Registration -->
+<div class="modal-overlay modal-wrapper" id="modal">
+  <div class="modal">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <div class="container">
+      <div class="form-toggle">
+        <input type="radio" name="tab" id="register-tab" checked>
+        <input type="radio" name="tab" id="login-tab">
+        <div class="tabs">
+          <label for="register-tab" class="tab">Register</label>
+          <label for="login-tab" class="tab">Login</label>
+        </div>
+
+        <div class="form-content">
+          <!-- Register Form -->
+          <form class="register-form" action="#">
+            <div class="title">Registration</div>
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" placeholder="Enter your username" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter your number" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="password" placeholder="Confirm your password" required>
+              </div>
+            </div>
+            <div class="gender-details">
+              <span class="gender-title">Gender</span>
+              <div class="category">
+                <label><input type="radio" name="gender"><span class="dot one"></span>Male</label>
+                <label><input type="radio" name="gender"><span class="dot two"></span>Female</label>
+                <label><input type="radio" name="gender"><span class="dot three"></span>Prefer not to say</label>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Register">
+            </div>
+          </form>
+
+          <!-- Login Form -->
+          <form class="login-form" onsubmit="loginUser(event)">
+            <div class="title">Login</div>
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Email or Phone</span>
+                <input type="text" placeholder="Enter email or phone" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+            </div>
+            <div class="forgot-pass">
+              <a href="#">Forgot Password?</a>
+            </div>
+            <div class="button">
+              <input type="submit" value="Login">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  <div class="toast" id="successToast">
+  Registration successful! Please log in.
+</div>
+<div class="toast" id="loginToast">
+  Login successful! Redirecting to dashboard...
+</div>
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gymrats | Dashboard</title>
+  <link rel="stylesheet" href="board.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+  <div class="nav__logo" id="logo">
+    <a href="#"><img src="logo.png" alt="logo" /></a>
+  </div>
+
+  <!-- Toggle button -->
+  <div class="nav__toggle" onclick="toggleMenu()">
+    <i class="ri-menu-line"></i>
+  </div>
+
+  <ul class="nav__links" id="navLinks">
+    <li class="link"><a href="index.html">Home</a> </li>
+    <li class="link"><a href="#program-section">Program</a></li>
+    <li class="link"><a href="#upper-body">Upper body</a></li>
+    <li class="link"><a href="#lower-body">Lower body</a></li>
+    <li class="link"><a href="#full-body">Full body</a></li>
+    <li><button onclick="logout()" class="btn logout-btn">Logout</button></li>
+  </ul>
+</nav>
+
+  <main class="dashboard__main">
+    <section class="section__container">
+      <h2 id="programs" class="section__header">Select Your Programs</h2>
+
+<h3 id="upper-body" class="section__subheader">Upper Body</h3>
+      <div class="program__grid">
+        <div class="program__card" data-program="Chest Workout" data-section="Upper Body">
+          <img src="chest.jpg" alt="Chest Workout" />
+          <div class="program__info">
+            <span>Chest Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Back Workout" data-section="Upper Body">
+          <img src="back.jpg" alt="Back Workout" />
+          <div class="program__info">
+            <span>Back Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Biceps Workout" data-section="Upper Body">
+          <img src="biceps.jpg" alt="Biceps Workout" />
+          <div class="program__info">
+            <span>Biceps Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="program__grid">
+        <div class="program__card" data-program="Shoulder Workout" data-section="Upper Body">
+          <img src="shoulder.jpg" alt="Shoulder Workout" />
+          <div class="program__info">
+            <span>Shoulder Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Triceps Workout " data-section="Upper Body">
+          <img src="triceps.jpg" alt="Triceps Workout" />
+          <div class="program__info">
+            <span>Triceps Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Forearms Workout" data-section="Upper Body">
+          <img src="forearms.jpg" alt="Forearms Workout" />
+          <div class="program__info">
+            <span>Forearms Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lower Body -->
+      <h3 id="lower-body" class="section__subheader">Lower Body</h3>
+
+      <div class="program__grid">
+        <div class="program__card" data-program="Glute Workout" data-section="Lower Body">
+          <img src="glute.jpg" alt="Glute Workout" />
+          <div class="program__info">
+            <span>Glute Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Hamstring Workout " data-section="Lower Body">
+          <img src="hamstring.jpg" alt="Hamstring Workout" />
+          <div class="program__info">
+            <span>Hamstring Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Quadriceps Workout" data-section="Lower Body">
+          <img src="quads.jpg" alt="Quadriceps Workout" />
+          <div class="program__info">
+            <span>Quadriceps Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="program__grid">
+        <div class="program__card" data-program="Calves Workout" data-section="Lower Body">
+          <img src="calves.jpg" alt="Calves Workout" />
+          <div class="program__info">
+            <span>Calves Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Adductors Workout " data-section="Lower Body">
+          <img src="adductors.jpg" alt="Adductors Workout" />
+          <div class="program__info">
+            <span>Adductors Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Abductors Workout" data-section="Lower Body">
+          <img src="abductors.jpg" alt="Abductors Workout" />
+          <div class="program__info">
+            <span>Abductors Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Body -->
+      <h3 id="full-body" class="section__subheader">Full Body</h3>
+      <div class="program__grid">
+        <div class="program__card" data-program="Chest Workout" data-section="Full Body">
+          <img src="chest.jpg" alt="Chest Workout" />
+          <div class="program__info">
+            <span>Chest Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Back Workout" data-section="Full Body">
+          <img src="back.jpg" alt="Back Workout" />
+          <div class="program__info">
+            <span>Back Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Biceps Workout" data-section="Full Body">
+          <img src="biceps.jpg" alt="Biceps Workout" />
+          <div class="program__info">
+            <span>Biceps Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="program__grid">
+        <div class="program__card" data-program="Shoulder Workout" data-section="Full Body">
+          <img src="shoulder.jpg" alt="Shoulder Workout" />
+          <div class="program__info">
+            <span>Shoulder Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Triceps Workout" data-section="Full Body">
+          <img src="triceps.jpg" alt="Triceps Workout" />
+          <div class="program__info">
+            <span>Triceps Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Forearms Workout" data-section="Full Body">
+          <img src="forearms.jpg" alt="Forearms Workout" />
+          <div class="program__info">
+            <span>Forearms Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="program__grid">
+        <div class="program__card" data-program="Glute Workout" data-section="Full Body">
+          <img src="glute.jpg" alt="Glute Workout" />
+          <div class="program__info">
+            <span>Glute Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Hamstring Workout" data-section="Full Body">
+          <img src="hamstring.jpg" alt="Hamstring Workout" />
+          <div class="program__info">
+            <span>Hamstring Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Quadriceps Workout" data-section="Full Body">
+          <img src="quads.jpg" alt="Quadriceps Workout" />
+          <div class="program__info">
+            <span>Quadriceps Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="program__grid">
+        <div class="program__card" data-program="Calves Workout" data-section="Full Body">
+          <img src="calves.jpg" alt="Calves Workout" />
+          <div class="program__info">
+            <span>Calves Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Adductors Workout" data-section="Full Body">
+          <img src="adductors.jpg" alt="Adductors Workout" />
+          <div class="program__info">
+            <span>Adductors Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+
+        <div class="program__card" data-program="Abductors Workout" data-section="Full Body">
+          <img src="abductors.jpg" alt="Abductors Workout" />
+          <div class="program__info">
+            <span>Abductors Workout</span>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ Selected Programs ============ -->
+      <div class="selected__section">
+        <h3>Selected Programs:</h3>
+        <ul id="selectedList"></ul>
+        <button id="proceedBtn" class="btn">OK</button>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section__container schedule__section" id="scheduleSection" style="display: none;">
+      <h2 class="section__header">Schedule Your Workout</h2>
+      <label for="schedule">Choose Time:</label>
+      <input type="datetime-local" id="schedule" />
+      <button id="confirmBtn" class="btn">Confirm Booking</button>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Successfully booked your workout!</div>
+  <div class="toast" id="addToast">Program added!</div>
+  <script src="dashboard.js"></script>
+  <script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+</script>
+</body>
+</html>
